@@ -63,7 +63,7 @@ class Normalize(object):
             return s.translate(trans, delete)
         return translate
 
-    def multiple_replace(self, text, addict):
+    def multiple_replace(self, text, addict):     #replace all keys of addict at one time
         rx = re.compile('|'.join(addict.keys()))
         def one_xlat(match):
             return addict[match.group(0)]
